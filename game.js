@@ -3,4 +3,13 @@ function getComputerChoice(){
     /* Crea variable para obtener número aleatorio entre 0 y 2 incluidos */
     let numeroAleatorio = Math.floor(Math.random() * (2 - 0 + 1)+ 0);
 
+    /* Crea un switch para obtener la eleccion de la computadora */
+    switch(numeroAleatorio){
+        case 0:
+            return "Piedra"
+        case 1:
+            return "Papel"
+        case 2:
+            return "Tijeras"
+    }
 }
