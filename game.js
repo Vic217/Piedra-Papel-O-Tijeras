@@ -15,9 +15,3 @@ function getComputerChoice(){
     }
 }
 
-/* Se crea función para que el jugador elija su arma */
-function playerSelection(){
-
-    /* Crea variable para eleccion de jugador */
-    let jugador = prompt("Elija cual es el arma que utilizará: \n a) Piedra \n b) Papel \n c) Tijeras")
-}
