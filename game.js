@@ -15,3 +15,12 @@ function getComputerChoice(){
     }
 }
 
+/* Se crea variable para eleccion del usuario */
+let playerSelection = prompt("Elegir arma: ");
+
+/* Se crean variables para tener un estilo cadena */
+let primerMayuscula = jugador.charAt(0).toUpperCase();
+let restoCadena = jugador.slice(1).toLowerCase();
+
+/* Se unen las variables anteriores */
+playerSelection = primerMayuscula+restoCadena;
