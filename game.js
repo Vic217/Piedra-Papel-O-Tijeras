@@ -1,3 +1,8 @@
+/* Funcion para jugar */
+function playRound(playerSelection, computerSelection) {
+    // your code here!
+  }
+
 /* Se crea función para que la computadora realice su elección */
 function getComputerChoice(){
 
@@ -14,6 +19,9 @@ function getComputerChoice(){
             return "Tijeras"
     }
 }
+
+/* Crea variable para la eleccion de computadora */
+const computerSelection = getComputerChoice();
 
 /* Se crea variable para eleccion del usuario */
 let playerSelection = prompt("Elegir arma: ");
