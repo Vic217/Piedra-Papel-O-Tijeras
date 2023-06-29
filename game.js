@@ -1,6 +1,24 @@
 /* Funcion para jugar */
 function playRound(playerSelection, computerSelection) {
-    // your code here!
+    if (playerSelection === computerSelection) {
+        console.log("Es un empate!, Realizaron la misma elección!!!")
+    } else if (computerSelection === "Piedra"){
+        if (playerSelection === "Tijeras") {
+            console.log("Perdiste la piedra rompe tijeras!");
+        }else {
+            console.log("Ganaste papel envuelve a piedra!");
+        }
+    } else if ( playerSelection === "Papel" ){
+        console.log("Perdiste tijeras cortan papel!")
+    } else if ( computerSelection === "Tijeras" ){
+        console.log("Ganaste piedra rompe tijeras!!")
+    } else{
+        if (playerSelection === "Piedra"){
+            console.log("Perdiste el papel envuelve a la piedra!")
+        } else{
+            console.log("Ganaste tijeras cortan papel!!")
+        }
+    }
   }
 
 /* Se crea función para que la computadora realice su elección */
