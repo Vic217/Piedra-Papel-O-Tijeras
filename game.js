@@ -20,26 +20,33 @@ function game(){
     /* Funcion para jugar */
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
-            return "Es un empate!, Realizaron la misma elección!!!";
+            const res = document.getElementById("resultado");
+            return res.innerText = "Es un empate!, Realizaron la misma elección!!!";
         } else if (computerSelection === "Piedra") {
             if (playerSelection === "Tijeras") {
-                return "Perdiste la piedra rompe tijeras!";
+                const res = document.getElementById("resultado");
+                return res.innerText = "Perdiste la piedra rompe tijeras!";
             } else {
-                return "Ganaste papel envuelve a piedra!";
+                const res = document.getElementById("resultado");
+                return res.innerText = "Ganaste papel envuelve a piedra!";
             }
         } else if (playerSelection === "Papel") {
-            return "Perdiste tijeras cortan papel!";
+            const res = document.getElementById("resultado");
+            return res.innerText = "Perdiste tijeras cortan papel!";
         } else if (computerSelection === "Tijeras") {
-            return "Ganaste piedra rompe tijeras!!";
+            const res = document.getElementById("resultado");
+            return res.innerText = "Ganaste piedra rompe tijeras!!";
         } else {
             if (playerSelection === "Piedra") {
-                return "Perdiste el papel envuelve a la piedra!";
+                const res = document.getElementById("resultado");
+                return res.innerText = "Perdiste el papel envuelve a la piedra!";
             } else {
-                return "Ganaste tijeras cortan papel!!";
+                const res = document.getElementById("resultado");
+                return res.innerText = "Ganaste tijeras cortan papel!!";
             }
         }
     }
-    
+
     // Elección del jugador
     const armas = document.getElementsByClassName("arma");
     for (const elec of armas) {
