@@ -1,10 +1,15 @@
 // Función del juego
-function game(){
+function game() {
+
+    // Crea variable para ir contando los puntos por juego
+    let computadora = 0;
+    let jugador = 0;
+    let i = 0;
 
     // Máquina escoge
-    function getComputerChoice(){
-        let computadoraSelec = Math.floor(Math.random () * (2 - 0 + 1) + 0);
-        switch (computadoraSelec){
+    function getComputerChoice() {
+        let computadoraSelec = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+        switch (computadoraSelec) {
             case 0:
                 return "Piedra"
             case 1:
@@ -17,7 +22,7 @@ function game(){
     // Eleccion de máquina
     const computerSelection = getComputerChoice();
 
-    /* Funcion para jugar */
+    // Funcion para jugar
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
             const res = document.getElementById("resultado");
