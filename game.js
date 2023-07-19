@@ -1,10 +1,10 @@
 /* Función para contar rondas y ver un ganador final */
 function game(){
 
-    /* Crea variable para ir contando los puntos por juego */
+    /* Crea variable para ir contando los puntos por juego
     let computadora = 0;
     let jugador = 0;
-    let i = 0;
+    let i = 0;*/
 
     /* Funcion para jugar */
     function playRound(playerSelection, computerSelection) {
@@ -34,20 +34,5 @@ function game(){
             }
         }
     }
-        
-        if ( computadora === 3){
-            i = 10;
-            return "Juego terminado, la computadora es la vencedora con "+ computadora+ " juegos ganados de 5";
-        } else if ( jugador === 3){
-            i = 10;
-            return "Juego terminado, has sido el vencedor con un total de "+ jugador+ " juegos ganados de 5";
-        }
-    }
-
-    if (computadora > jugador){
-        return "La computadora ganó con "+ computadora+ " juegos ganados!";
-    } else{
-        return "Ganaste con un total de "+ jugador+ " juegos ganados!";
-    }
-
+}
 console.log(game());
