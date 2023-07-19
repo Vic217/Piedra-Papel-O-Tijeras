@@ -6,6 +6,30 @@ function game(){
     let jugador = 0;
     let i = 0;*/
 
+    function getComputerChoice(){
+        let computadoraSelec = Math.floor(Math.random () * (2 - 0 + 1) + 0);
+        switch (computadoraSelec){
+            case 0:
+                return "Piedra"
+            case 1:
+                return "Papel"
+            case 2:
+                return "Tijeras"
+        }
+    }
+
+    /* Crea variable para la eleccion de computadora */
+    const computerSelection = getComputerChoice();
+
+    const armas = document.getElementsByClassName("arma");
+
+    for (let arma of armas){
+        console.log(arma);
+        arma.addEventListener("click", (e) => {
+            console.log(e.target.innerText);
+        });
+    }
+
     /* Funcion para jugar */
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
