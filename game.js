@@ -22,7 +22,7 @@ function game() {
     // Eleccion de máquina
     const computerSelection = getComputerChoice();
 
-    // Funcion para jugar
+    // Funcion para jugar cada round
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
             const res = document.getElementById("resultado");
@@ -57,6 +57,7 @@ function game() {
     for (const elec of armas) {
         elec.addEventListener("click", (e) => {
             const playerSelection = e.target.innerText;
+            
             // Llamada a comparaciones del juego
             console.log(playRound(playerSelection, computerSelection));
         });
