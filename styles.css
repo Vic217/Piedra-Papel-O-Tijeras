@@ -1,5 +1,33 @@
+body {
+    background-color: cadetblue;
+}
+
 div {
+    margin-top: 64px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+#contadorJugador {
+    background-color: #12ae34;
+    color: blue;
+    font-weight: bold;
+    margin-left: 82px;
+}
+
+#contadorMaquina {
+    background-color: #4442fe34;
+    font-weight: bold;
+}
+
+#resultado {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #ED2312;
+    background-color: black;
+}
+
+button {
+    margin-top: 25px;
 }
