@@ -5,6 +5,12 @@ function game() {
     let computadora = 0;
     let jugador = 0;
 
+    const puntajeComputadora = document.getElementById("contadorMaquina");
+    puntajeComputadora.innerText = "Maquina " + computadora + " puntos";
+
+    const puntajeJugador = document.getElementById("contadorJugador");
+    puntajeJugador.innerText = "Jugador " + jugador + " puntos";
+
     // Funcion para jugar cada round
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
@@ -25,7 +31,7 @@ function game() {
                 const puntajeComputadora = document.getElementById("contadorMaquina");
                 puntajeComputadora.innerText = "Maquina " + computadora + " puntos";
                 const res = document.getElementById("resultado");
-                return res.innerText = "Perdiste la piedra rompe tijeras!";
+                return res.innerText = "Perdiste, la piedra rompe tijeras!";
             } else {
                 jugador += 1;
                 const puntajeJugador = document.getElementById("contadorJugador");
@@ -34,7 +40,7 @@ function game() {
                 const puntajeComputadora = document.getElementById("contadorMaquina");
                 puntajeComputadora.innerText = "Maquina " + computadora + " puntos";
                 const res = document.getElementById("resultado");
-                return res.innerText = "Ganaste papel envuelve a piedra!";
+                return res.innerText = "Ganaste, papel envuelve a piedra!";
             }
         } else if (playerSelection === "Papel") {
             computadora += 1;
@@ -44,7 +50,7 @@ function game() {
             const puntajeComputadora = document.getElementById("contadorMaquina");
             puntajeComputadora.innerText = "Maquina " + computadora + " puntos";
             const res = document.getElementById("resultado");
-            return res.innerText = "Perdiste tijeras cortan papel!";
+            return res.innerText = "Perdiste, tijeras cortan papel!";
         } else if (computerSelection === "Tijeras") {
             jugador += 1;
             const puntajeJugador = document.getElementById("contadorJugador");
@@ -53,7 +59,7 @@ function game() {
             const puntajeComputadora = document.getElementById("contadorMaquina");
             puntajeComputadora.innerText = "Maquina " + computadora + " puntos";
             const res = document.getElementById("resultado");
-            return res.innerText = "Ganaste piedra rompe tijeras!!";
+            return res.innerText = "Ganaste, piedra rompe tijeras!!";
         } else {
             if (playerSelection === "Piedra") {
                 computadora += 1;
@@ -63,7 +69,7 @@ function game() {
                 const puntajeComputadora = document.getElementById("contadorMaquina");
                 puntajeComputadora.innerText = "Maquina " + computadora + " puntos";
                 const res = document.getElementById("resultado");
-                return res.innerText = "Perdiste el papel envuelve a la piedra!";
+                return res.innerText = "Perdiste, el papel envuelve a la piedra!";
             } else {
                 jugador += 1;
                 const puntajeJugador = document.getElementById("contadorJugador");
@@ -72,7 +78,7 @@ function game() {
                 const puntajeComputadora = document.getElementById("contadorMaquina");
                 puntajeComputadora.innerText = "Maquina " + computadora + " puntos";
                 const res = document.getElementById("resultado");
-                return res.innerText = "Ganaste tijeras cortan papel!!";
+                return res.innerText = "Ganaste, tijeras cortan papel!!";
             }
         }
     }
