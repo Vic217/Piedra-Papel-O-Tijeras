@@ -4,23 +4,6 @@ function game() {
     // Crea variable para ir contando los puntos por juego
     let computadora = 0;
     let jugador = 0;
-    let i = 0;
-
-    // Máquina escoge
-    function getComputerChoice() {
-        let computadoraSelec = Math.floor(Math.random() * (2 - 0 + 1) + 0);
-        switch (computadoraSelec) {
-            case 0:
-                return "Piedra"
-            case 1:
-                return "Papel"
-            case 2:
-                return "Tijeras"
-        }
-    }
-
-    // Eleccion de máquina
-    const computerSelection = getComputerChoice();
 
     // Funcion para jugar cada round
     function playRound(playerSelection, computerSelection) {
@@ -100,8 +83,32 @@ function game() {
         elec.addEventListener("click", (e) => {
             const playerSelection = e.target.innerText;
 
-            // Llamada a comparaciones del juego
-            console.log(playRound(playerSelection, computerSelection));
+            // Máquina escoge
+            function getComputerChoice() {
+                let computadoraSelec = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+                switch (computadoraSelec) {
+                    case 0:
+                        return "Piedra"
+                    case 1:
+                        return "Papel"
+                    case 2:
+                        return "Tijeras"
+                }
+            }
+
+            // Eleccion de máquina
+            const computerSelection = getComputerChoice();    
+            
+            if(computadora > 4){
+                const res = document.getElementById("resultado");
+                return res.innerText = "Juego terminado, la computadora a ganado con " + computadora + " puntos";
+            } else if(jugador > 4){
+                const res = document.getElementById("resultado");
+                return res.innerText = "Felicidades has ganado!!, llegaste a los " + jugador + " puntos";
+            } else{
+                // Llamada a comparaciones del juego
+                console.log(playRound(playerSelection, computerSelection));
+            }
         });
     }
 }
